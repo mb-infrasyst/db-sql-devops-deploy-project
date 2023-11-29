@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "db-sql-devops-deploy-project", "db-sql-devops-deploy-project\db-sql-devops-deploy-project.sqlproj", "{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4736DCC3-6FF7-439E-9578-E0CFAC8520EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2671C61-6D1B-4DBB-9439-EB22A4412383}
+	EndGlobalSection
+EndGlobal
