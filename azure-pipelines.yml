@@ -21,32 +21,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Check for SSDT directory in the typical Visual Studio installation path
-      $ssdtPath = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\150"
-      if (Test-Path $ssdtPath) {
-        Write-Host "SSDT is installed at $ssdtPath"
-      } else {
-        Write-Host "SSDT is not installed"
-      }
-  displayName: 'Check SSDT Installation 2019'
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Check for SSDT directory in the Visual Studio 2022 installation path
-      $ssdtPath = "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\150"
-      if (Test-Path $ssdtPath) {
-        Write-Host "SSDT is installed at $ssdtPath"
-      } else {
-        Write-Host "SSDT is not installed"
-      }
-  displayName: 'Check SSDT Installation 2022'
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -57,6 +31,14 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Host "Listing contents of $(System.DefaultWorkingDirectory):"
+      Get-ChildItem -Path "$(System.DefaultWorkingDirectory)" -Recurse
+  displayName: 'List Contents of Working Directory'
 
 - task: CopyFiles@2
   inputs:
