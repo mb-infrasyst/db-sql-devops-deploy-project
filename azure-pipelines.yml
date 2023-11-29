@@ -21,6 +21,20 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Check for SSDT directory in the typical Visual Studio installation path
+      $ssdtPath = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\150"
+      if (Test-Path $ssdtPath) {
+        Write-Host "SSDT is installed at $ssdtPath"
+      } else {
+        Write-Host "SSDT is not installed"
+      }
+  displayName: 'Check SSDT Installation'
+
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
