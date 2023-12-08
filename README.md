@@ -1,1 +1,1 @@
-# mb-infrasyst-db-sql-devops-deploy-project
+# db-sql-devops-deploy-project
