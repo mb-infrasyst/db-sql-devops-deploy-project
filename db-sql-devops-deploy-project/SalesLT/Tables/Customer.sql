@@ -16,6 +16,10 @@
     [ModifiedDate] DATETIME          CONSTRAINT [DF_Customer_ModifiedDate] DEFAULT (getdate()) NOT NULL,
     [TestColumn] NCHAR(10) NULL, 
     [TestColumn2] NCHAR(10) NULL, 
+<<<<<<< HEAD
+=======
+    [TestColumn3] NCHAR(10) NULL, 
+>>>>>>> origin/master
     CONSTRAINT [PK_Customer_CustomerID] PRIMARY KEY CLUSTERED ([CustomerID] ASC),
     CONSTRAINT [AK_Customer_rowguid] UNIQUE NONCLUSTERED ([rowguid] ASC)
 );
