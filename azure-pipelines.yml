@@ -10,13 +10,11 @@ pool:
   vmImage: 'windows-2022'
 
 variables:
-<<<<<<< HEAD
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-=======
 - name: solution
   value: '**/*.sln'
 - name: buildPlatform
@@ -33,7 +31,6 @@ steps:
     GITGUARDIAN_API_KEY: $(gitguardianApiKey)
   displayName: 'Run GitGuardian Secret Scan'
 
->>>>>>> origin/master
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
